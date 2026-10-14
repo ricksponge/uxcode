@@ -1,0 +1,6 @@
+{
+  "name": "OpenCode Web UI & Linux Bridge",
+  "description": "Interface web moderne et pont local pour OpenCode et gen-local-proxy sous Linux, avec scripts d'installation et de démarrage automatisés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

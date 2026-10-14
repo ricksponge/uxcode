@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenCode Web UI - Interface locale pour gen-local-proxy et opencode
+Documentation=https://github.com/opencode
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.local/share/opencode-ui
+ExecStart=/usr/bin/env npm run start
+Restart=always
+RestartSec=5
+Environment=PORT=3000
+Environment=NODE_ENV=production
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
