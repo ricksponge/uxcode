@@ -26,3 +26,14 @@ jobs:
       run: |
         npm install --legacy-peer-deps
         npm run build
+
+    - name: Préparer l'archive de déploiement
+      run: |
+        mkdir -p dist-package
+        cp -r server.ts package.json dist/ node_modules/ scripts/ dist-package/ 2>/dev/null || true
+
+    - name: Télécharger l'artefact final
+      uses: actions/upload-artifact@v4
+      with:
+        name: opencode-ui-intranet-ready
+        path: dist-package/
